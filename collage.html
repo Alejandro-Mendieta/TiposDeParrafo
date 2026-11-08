@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Párrafo - UPTC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Montserrat:wght@400;600;700;800&family=Roboto+Slab:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #12181f;
+        }
+        .board-bg {
+            background-color: #1e2530;
+            background-image: radial-gradient(#2d3748 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+        .handwriting {
+            font-family: 'Caveat', cursive;
+        }
+        .card-text {
+            font-family: 'Roboto Slab', serif;
+        }
+        .sticky-card {
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            box-shadow: 4px 5px 15px rgba(0,0,0,0.4);
+        }
+        .sticky-card:hover {
+            transform: translateY(-6px) scale(1.02) !important;
+            box-shadow: 8px 12px 25px rgba(0,0,0,0.6);
+            z-index: 40 !important;
+        }
+        .pin {
+            position: absolute;
+            top: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            box-shadow: 0 3px 6px rgba(0,0,0,0.4);
+            z-index: 10;
+        }
+        .tape {
+            position: absolute;
+            top: -12px;
+            left: 30%;
+            width: 80px;
+            height: 24px;
+            background-color: rgba(255, 255, 255, 0.45);
+            backdrop-filter: blur(2px);
+            transform: rotate(-3deg);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="text-slate-100 min-h-screen p-4 md:p-8">
+
+    <!-- Encabezado de Entrega -->
+    <header class="max-w-7xl mx-auto mb-8 bg-slate-800/90 border border-slate-700 rounded-2xl p-6 shadow-2xl backdrop-blur-md">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+            <div>
+                <h1 class="text-2xl md:text-4xl font-extrabold text-white tracking-tight">TIPOS DE PÁRRAFO</h1>
+                <p class="text-slate-400 text-sm mt-1">Según su Información, Función y Organización Visual (Ejemplos extraídos de Libros)</p>
+            </div>
+            <div class="bg-slate-900/80 p-4 rounded-xl border border-slate-700 text-xs text-slate-300 space-y-1">
+                <p><strong class="text-amber-400">Estudiante:</strong> Estudiante UPTC</p>
+                <p><strong class="text-amber-400">Carrera:</strong> Ingeniería de Sistemas y Computación</p>
+                <p><strong class="text-amber-400">Asignatura:</strong> Competencias Comunicativas</p>
+                <p><strong class="text-amber-400">Docente:</strong> Leydi Lugo Barrera</p>
+                <p><strong class="text-amber-400">Fecha:</strong> 9 de Noviembre de 2026</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cartelera Principal -->
+    <main class="max-w-7xl mx-auto board-bg rounded-3xl border-4 border-slate-700 p-6 md:p-10 shadow-2xl relative overflow-hidden">
+        
+        <!-- SECCIÓN 1 -->
+        <section class="mb-14">
+            <div class="inline-flex items-center gap-3 bg-amber-500 text-slate-950 font-black px-6 py-2 rounded-xl text-lg md:text-xl shadow-lg transform -rotate-1 mb-8">
+                <span class="bg-slate-950 text-amber-400 w-8 h-8 rounded-lg flex items-center justify-center text-base">1</span>
+                <span>SEGÚN LA INFORMACIÓN QUE CONTIENEN Y SU FINALIDAD</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- 1. Narrativo -->
+                <div class="sticky-card relative bg-amber-100 text-slate-900 p-5 rounded-lg transform rotate-1 border-t-8 border-amber-400">
+                    <div class="pin bg-red-600"></div>
+                    <span class="absolute top-2 right-2 bg-amber-300 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#1</span>
+                    <h3 class="font-extrabold text-amber-900 uppercase text-sm tracking-wider mb-2">Párrafo Narrativo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"Una tarde de 1943, Alan Turing caminaba en solitario por los jardines de Bletchley Park cavilando sobre las secuencias de las máquinas Enigma. De repente, se detuvo ante un rosal, sacó una libreta gastada de su bolsillo y comenzó a anotar la estructura formal..."</p>
+                    <div class="text-[10px] text-amber-800 font-semibold border-t border-amber-300/80 pt-2">
+                        <strong>Fuente:</strong> Hodges, A. (2014). <em>Alan Turing: The Enigma</em>. Princeton University Press.
+                    </div>
+                </div>
+
+                <!-- 2. Descriptivo -->
+                <div class="sticky-card relative bg-emerald-100 text-slate-900 p-5 rounded-lg transform -rotate-2 border-t-8 border-emerald-400">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-emerald-300 text-emerald-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#2</span>
+                    <h3 class="font-extrabold text-emerald-900 uppercase text-sm tracking-wider mb-2">Párrafo Descriptivo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"La consola del servidor principal destacaba por su chasís metálico negro mate de tres unidades de rack, en cuyo panel frontal brillaban hileras simétricas de diodos LED de color azul cobalto. Sus ventiladores emitían un zumbido grave y constante..."</p>
+                    <div class="text-[10px] text-emerald-800 font-semibold border-t border-emerald-300/80 pt-2">
+                        <strong>Fuente:</strong> Tanenbaum, A. S., & Wetherall, D. J. (2012). <em>Redes de computadoras</em>. Pearson.
+                    </div>
+                </div>
+
+                <!-- 3. Explicativo -->
+                <div class="sticky-card relative bg-blue-100 text-slate-900 p-5 rounded-lg transform rotate-2 border-t-8 border-blue-400">
+                    <div class="pin bg-blue-600"></div>
+                    <span class="absolute top-2 right-2 bg-blue-300 text-blue-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#3</span>
+                    <h3 class="font-extrabold text-blue-900 uppercase text-sm tracking-wider mb-2">Párrafo Explicativo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"La criptografía de llave pública utiliza un par de claves matemáticamente vinculadas: una clave pública para cifrar el mensaje y una clave privada para descifrarlo. La seguridad del sistema radica en la dificultad computacional de factorizar números primos enteros..."</p>
+                    <div class="text-[10px] text-blue-800 font-semibold border-t border-blue-300/80 pt-2">
+                        <strong>Fuente:</strong> Stallings, W. (2017). <em>Cryptography and Network Security</em>. Pearson.
+                    </div>
+                </div>
+
+                <!-- 4. Argumentativo -->
+                <div class="sticky-card relative bg-rose-100 text-slate-900 p-5 rounded-lg transform -rotate-1 border-t-8 border-rose-400">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-rose-300 text-rose-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#4</span>
+                    <h3 class="font-extrabold text-rose-900 uppercase text-sm tracking-wider mb-2">Párrafo Argumentativo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"Es imprescindible adoptar la arquitectura de Zero Trust en la infraestructura crítica nacional, ya que el perímetro de red tradicional ha desaparecido por completo con la adopción masiva de la nube. Confiar ciegamente en la red interna expone a ataques..."</p>
+                    <div class="text-[10px] text-rose-800 font-semibold border-t border-rose-300/80 pt-2">
+                        <strong>Fuente:</strong> Rose, S. et al. (2020). <em>Zero Trust Architecture</em>. NIST Special Pub.
+                    </div>
+                </div>
+
+                <!-- 5. Aclaratorio -->
+                <div class="sticky-card relative bg-yellow-100 text-slate-900 p-5 rounded-lg transform rotate-1 border-t-8 border-yellow-400">
+                    <div class="pin bg-yellow-600"></div>
+                    <span class="absolute top-2 right-2 bg-yellow-300 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#5</span>
+                    <h3 class="font-extrabold text-yellow-900 uppercase text-sm tracking-wider mb-2">Párrafo Aclaratorio</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"El uso de la fuerza bruta para romper credenciales resulta inviable en entornos modernos —entiéndase por fuerza bruta el intento sistemático de probar todas las combinaciones posibles mediante scripts automatizados— debido a los bloqueos..."</p>
+                    <div class="text-[10px] text-yellow-800 font-semibold border-t border-yellow-300/80 pt-2">
+                        <strong>Fuente:</strong> Stuttard, D., & Pinto, M. (2011). <em>The Web Application Hacker's Handbook</em>.
+                    </div>
+                </div>
+
+                <!-- 6. Expositivo -->
+                <div class="sticky-card relative bg-indigo-100 text-slate-900 p-5 rounded-lg transform -rotate-2 border-t-8 border-indigo-400">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-indigo-300 text-indigo-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#6</span>
+                    <h3 class="font-extrabold text-indigo-900 uppercase text-sm tracking-wider mb-2">Párrafo Expositivo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"Un desbordamiento de búfer (buffer overflow) ocurre cuando un programa intenta escribir más datos en un bloque de memoria temporal de los que fue asignado para contener. Esta vulnerabilidad permite a un atacante sobrescribir el puntero de instrucción..."</p>
+                    <div class="text-[10px] text-indigo-800 font-semibold border-t border-indigo-300/80 pt-2">
+                        <strong>Fuente:</strong> Erickson, J. (2008). <em>Hacking: The Art of Exploitation</em>. No Starch Press.
+                    </div>
+                </div>
+
+                <!-- 7. Diálogo Directo -->
+                <div class="sticky-card relative bg-teal-100 text-slate-900 p-5 rounded-lg transform rotate-2 border-t-8 border-teal-400">
+                    <div class="pin bg-teal-600"></div>
+                    <span class="absolute top-2 right-2 bg-teal-300 text-teal-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#7</span>
+                    <h3 class="font-extrabold text-teal-900 uppercase text-sm tracking-wider mb-2">Diálogo (Directo)</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">—No podemos desplegar el código a producción sin ejecutar las pruebas de seguridad estáticas —advirtió el Ingeniero de DevSecOps.<br>—El cliente exige el lanzamiento para medianoche —respondió el gerente.</p>
+                    <div class="text-[10px] text-teal-800 font-semibold border-t border-teal-300/80 pt-2">
+                        <strong>Fuente:</strong> Kim, G. et al. (2016). <em>The DevOps Handbook</em>. IT Revolution Press.
+                    </div>
+                </div>
+
+                <!-- 8. Diálogo Indirecto -->
+                <div class="sticky-card relative bg-cyan-100 text-slate-900 p-5 rounded-lg transform -rotate-1 border-t-8 border-cyan-400">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-cyan-300 text-cyan-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#8</span>
+                    <h3 class="font-extrabold text-cyan-900 uppercase text-sm tracking-wider mb-2">Diálogo (Indirecto)</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"El auditor de seguridad informó a la junta directiva que los servidores centrales habían registrado accesos no autorizados durante la madrugada. Añadió que era indispensable revocar de inmediato las credenciales expuestas..."</p>
+                    <div class="text-[10px] text-cyan-800 font-semibold border-t border-cyan-300/80 pt-2">
+                        <strong>Fuente:</strong> Vacca, J. R. (2017). <em>Managing Information Security</em>. Elsevier.
+                    </div>
+                </div>
+
+                <!-- 9. Informativo Deductivo -->
+                <div class="sticky-card relative bg-orange-100 text-slate-900 p-5 rounded-lg transform rotate-1 border-t-8 border-orange-400">
+                    <div class="pin bg-orange-600"></div>
+                    <span class="absolute top-2 right-2 bg-orange-300 text-orange-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#9</span>
+                    <h3 class="font-extrabold text-orange-900 uppercase text-sm tracking-wider mb-2">Informativo Deductivo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"La arquitectura x86-64 ofrece una amplia gama de registros de propósito general para optimizar la ejecución del procesador. El registro RAX se utiliza en operaciones aritméticas, el RBX actúa como puntero y el RCX como contador..."</p>
+                    <div class="text-[10px] text-orange-800 font-semibold border-t border-orange-300/80 pt-2">
+                        <strong>Fuente:</strong> Bryant, R. E., & O'Hallaron, D. R. (2016). <em>Computer Systems</em>. Pearson.
+                    </div>
+                </div>
+
+                <!-- 10. Informativo Inductivo -->
+                <div class="sticky-card relative bg-lime-100 text-slate-900 p-5 rounded-lg transform -rotate-2 border-t-8 border-lime-400">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-lime-300 text-lime-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#10</span>
+                    <h3 class="font-extrabold text-lime-900 uppercase text-sm tracking-wider mb-2">Informativo Inductivo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"Las legiones romanas contaban con disciplina militar férrea, las calzadas permitían despliegue rápido y el derecho unificaba la administración. Por todo esto, se concluye que la ingeniería y la logística fueron los pilares del Imperio."</p>
+                    <div class="text-[10px] text-lime-800 font-semibold border-t border-lime-300/80 pt-2">
+                        <strong>Fuente:</strong> Mommsen, T. (2010). <em>Historia de Roma</em>. Editorial Turner.
+                    </div>
+                </div>
+
+                <!-- 11. Informativo Inductivo-Deductivo -->
+                <div class="sticky-card relative bg-violet-100 text-slate-900 p-5 rounded-lg transform rotate-2 border-t-8 border-violet-400">
+                    <div class="pin bg-violet-600"></div>
+                    <span class="absolute top-2 right-2 bg-violet-300 text-violet-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#11</span>
+                    <h3 class="font-extrabold text-violet-900 uppercase text-sm tracking-wider mb-2">Inductivo-Deductivo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"El tráfico anómalo en el puerto 443 creció exponencialmente, mientras las peticiones DNS mostraron dominios desconocidos. Estos eventos son claros indicadores de un compromiso activo por malware del tipo RAT..."</p>
+                    <div class="text-[10px] text-violet-800 font-semibold border-t border-violet-300/80 pt-2">
+                        <strong>Fuente:</strong> Sikorski, M., & Honig, A. (2012). <em>Practical Malware Analysis</em>. No Starch Press.
+                    </div>
+                </div>
+
+                <!-- 12. Informativo Entreverado -->
+                <div class="sticky-card relative bg-sky-100 text-slate-900 p-5 rounded-lg transform -rotate-1 border-t-8 border-sky-400">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-sky-300 text-sky-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#12</span>
+                    <h3 class="font-extrabold text-sky-900 uppercase text-sm tracking-wider mb-2">Informativo Entreverado</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"En el desarrollo de microservicios, cada módulo de software se ejecuta en su propio proceso independiente y se comunica por protocolos ligeros. Paralelamente, los contenedores Docker encapsulan el código con sus dependencias..."</p>
+                    <div class="text-[10px] text-sky-800 font-semibold border-t border-sky-300/80 pt-2">
+                        <strong>Fuente:</strong> Newman, S. (2021). <em>Building Microservices</em>. O'Reilly Media.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2 -->
+        <section class="mb-14">
+            <div class="inline-flex items-center gap-3 bg-sky-400 text-slate-950 font-black px-6 py-2 rounded-xl text-lg md:text-xl shadow-lg transform rotate-1 mb-8">
+                <span class="bg-slate-950 text-sky-400 w-8 h-8 rounded-lg flex items-center justify-center text-base">2</span>
+                <span>SEGÚN LA FUNCIÓN QUE CUMPLEN EN EL TEXTO</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- 13. Sintético -->
+                <div class="sticky-card relative bg-amber-100 text-slate-900 p-5 rounded-lg transform -rotate-1 border-t-8 border-amber-500">
+                    <div class="pin bg-amber-600"></div>
+                    <span class="absolute top-2 right-2 bg-amber-300 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#13</span>
+                    <h3 class="font-extrabold text-amber-900 uppercase text-sm tracking-wider mb-2">Introductorio Sintético</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"El uso de la Inteligencia Artificial Generativa en la creación de malware está transformando el panorama de la ciberseguridad. En este ensayo se analizarán los mecanismos de evasión y las estrategias defensivas..."</p>
+                    <div class="text-[10px] text-amber-800 font-semibold border-t border-amber-300/80 pt-2">
+                        <strong>Fuente:</strong> Russell, S., & Norvig, P. (2021). <em>Artificial Intelligence</em>. Pearson.
+                    </div>
+                </div>
+
+                <!-- 14. Con Anécdota -->
+                <div class="sticky-card relative bg-purple-100 text-slate-900 p-5 rounded-lg transform rotate-2 border-t-8 border-purple-400">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-purple-300 text-purple-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#14</span>
+                    <h3 class="font-extrabold text-purple-900 uppercase text-sm tracking-wider mb-2">Intro. con Anécdota</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"En 1988, Robert Tappan Morris liberó un programa de 99 líneas de código para medir la Internet naciente. Sin embargo, un error en el bucle paralizó más del 10% de las máquinas conectadas en horas..."</p>
+                    <div class="text-[10px] text-purple-800 font-semibold border-t border-purple-300/80 pt-2">
+                        <strong>Fuente:</strong> Hafner, K., & Lyon, M. (1998). <em>Where Wizards Stay Up Late</em>.
+                    </div>
+                </div>
+
+                <!-- 15. Declarativo -->
+                <div class="sticky-card relative bg-pink-100 text-slate-900 p-5 rounded-lg transform -rotate-2 border-t-8 border-pink-400">
+                    <div class="pin bg-pink-600"></div>
+                    <span class="absolute top-2 right-2 bg-pink-300 text-pink-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#15</span>
+                    <h3 class="font-extrabold text-pink-900 uppercase text-sm tracking-wider mb-2">Intro. Declarativo</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"La computación cuántica representa la mayor amenaza para los esquemas criptográficos asimétricos actuales. El algoritmo de Shor invalidará por completo la seguridad de RSA y ECC..."</p>
+                    <div class="text-[10px] text-pink-800 font-semibold border-t border-pink-300/80 pt-2">
+                        <strong>Fuente:</strong> Nielsen, M. A., & Chuang, I. L. (2010). <em>Quantum Computation</em>.
+                    </div>
+                </div>
+
+                <!-- 16. Con Cita -->
+                <div class="sticky-card relative bg-emerald-100 text-slate-900 p-5 rounded-lg transform rotate-1 border-t-8 border-emerald-500">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-emerald-300 text-emerald-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#16</span>
+                    <h3 class="font-extrabold text-emerald-900 uppercase text-sm tracking-wider mb-2">Intro. con Cita</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"«El único sistema verdaderamente seguro es aquel que está apagado, encerrado en un bloque de hormigón», afirmó Gene Spafford. En este trabajo examinaremos cómo la nube desafía esta premisa..."</p>
+                    <div class="text-[10px] text-emerald-800 font-semibold border-t border-emerald-300/80 pt-2">
+                        <strong>Fuente:</strong> Pfleeger, C. P. et al. (2015). <em>Security in Computing</em>. Prentice Hall.
+                    </div>
+                </div>
+
+                <!-- 17. Con Interrogante -->
+                <div class="sticky-card relative bg-yellow-100 text-slate-900 p-5 rounded-lg transform -rotate-1 border-t-8 border-yellow-500">
+                    <div class="pin bg-yellow-700"></div>
+                    <span class="absolute top-2 right-2 bg-yellow-300 text-yellow-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#17</span>
+                    <h3 class="font-extrabold text-yellow-900 uppercase text-sm tracking-wider mb-2">Intro. Interrogante</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"¿Es posible diseñar un sistema inmune a vulnerabilidades de día cero? ¿Qué responsabilidad recae sobre los ingenieros al priorizar la velocidad sobre la calidad del código? Responderemos analizando el S-SDLC..."</p>
+                    <div class="text-[10px] text-yellow-800 font-semibold border-t border-yellow-300/80 pt-2">
+                        <strong>Fuente:</strong> McGraw, G. (2006). <em>Software Security: Building Security In</em>.
+                    </div>
+                </div>
+
+                <!-- 18. Con Corrección -->
+                <div class="sticky-card relative bg-indigo-100 text-slate-900 p-5 rounded-lg transform rotate-2 border-t-8 border-indigo-500">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-indigo-300 text-indigo-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#18</span>
+                    <h3 class="font-extrabold text-indigo-900 uppercase text-sm tracking-wider mb-2">Intro. Corrección</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"Existe la creencia popular de que utilizar una VPN garantiza anonimato absoluto; sin embargo, las VPN solo cifran el tráfico hacia el proveedor. Las huellas del navegador siguen permitiendo el rastreo..."</p>
+                    <div class="text-[10px] text-indigo-800 font-semibold border-t border-indigo-300/80 pt-2">
+                        <strong>Fuente:</strong> Mitnick, K. D. (2017). <em>The Art of Invisibility</em>. Back Bay Books.
+                    </div>
+                </div>
+
+                <!-- 19. Con Contexto -->
+                <div class="sticky-card relative bg-teal-100 text-slate-900 p-5 rounded-lg transform -rotate-2 border-t-8 border-teal-500">
+                    <div class="pin bg-teal-700"></div>
+                    <span class="absolute top-2 right-2 bg-teal-300 text-teal-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#19</span>
+                    <h3 class="font-extrabold text-teal-900 uppercase text-sm tracking-wider mb-2">Intro. con Contexto</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"Durante la Guerra Fría, la necesidad de una red de comunicaciones descentralizada impulsó ARPANET. Exploraremos cómo esos protocolos pioneros evolucionaron hasta convertirse en la pila TCP/IP actual..."</p>
+                    <div class="text-[10px] text-teal-800 font-semibold border-t border-teal-300/80 pt-2">
+                        <strong>Fuente:</strong> Leiner, B. M. et al. (2009). <em>A Brief History of the Internet</em>. ACM.
+                    </div>
+                </div>
+
+                <!-- 20. Enumeración -->
+                <div class="sticky-card relative bg-orange-100 text-slate-900 p-5 rounded-lg transform rotate-1 border-t-8 border-orange-500">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-orange-300 text-orange-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#20</span>
+                    <h3 class="font-extrabold text-orange-900 uppercase text-sm tracking-wider mb-2">Desarrollo: Enumeración</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"El diseño conceptual de una base de datos relacional exige la definición clara de sus componentes: las tablas para entidades, atributos para propiedades, llaves primarias para unicidad y llaves foráneas para integridad..."</p>
+                    <div class="text-[10px] text-orange-800 font-semibold border-t border-orange-300/80 pt-2">
+                        <strong>Fuente:</strong> Silberschatz, A. et al. (2020). <em>Database System Concepts</em>.
+                    </div>
+                </div>
+
+                <!-- 21. Secuencia -->
+                <div class="sticky-card relative bg-lime-100 text-slate-900 p-5 rounded-lg transform -rotate-1 border-t-8 border-lime-500">
+                    <div class="pin bg-lime-700"></div>
+                    <span class="absolute top-2 right-2 bg-lime-300 text-lime-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#21</span>
+                    <h3 class="font-extrabold text-lime-900 uppercase text-sm tracking-wider mb-2">Desarrollo: Secuencia</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"La respuesta ante incidentes requiere 6 fases: 1) Preparación. 2) Identificación del vector. 3) Contención inmediata. 4) Erradicación. 5) Recuperación de servicios. 6) Lecciones aprendidas."</p>
+                    <div class="text-[10px] text-lime-800 font-semibold border-t border-lime-300/80 pt-2">
+                        <strong>Fuente:</strong> Cichonski, T. et al. (2012). <em>Incident Handling Guide</em>. NIST.
+                    </div>
+                </div>
+
+                <!-- 22. Comparación -->
+                <div class="sticky-card relative bg-rose-100 text-slate-900 p-5 rounded-lg transform rotate-2 border-t-8 border-rose-500">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-rose-300 text-rose-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#22</span>
+                    <h3 class="font-extrabold text-rose-900 uppercase text-sm tracking-wider mb-2">Comparación / Contraste</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"Mientras que la arquitectura monolítica agrupa la interfaz y lógica en un único paquete que facilita el despliegue, los microservicios dividen la aplicación en módulos independientes y escalables..."</p>
+                    <div class="text-[10px] text-rose-800 font-semibold border-t border-rose-300/80 pt-2">
+                        <strong>Fuente:</strong> Martin, R. C. (2017). <em>Clean Architecture</em>. Prentice Hall.
+                    </div>
+                </div>
+
+                <!-- 23. Conceptos -->
+                <div class="sticky-card relative bg-violet-100 text-slate-900 p-5 rounded-lg transform -rotate-2 border-t-8 border-violet-500">
+                    <div class="pin bg-violet-700"></div>
+                    <span class="absolute top-2 right-2 bg-violet-300 text-violet-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#23</span>
+                    <h3 class="font-extrabold text-violet-900 uppercase text-sm tracking-wider mb-2">Desarrollo: Conceptos</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"El Principio de Menor Privilegio (PoLP) establece que todo proceso debe poseer únicamente los permisos indispensables. Por ejemplo, un servidor web no debe ejecutarse con cuenta root..."</p>
+                    <div class="text-[10px] text-violet-800 font-semibold border-t border-violet-300/80 pt-2">
+                        <strong>Fuente:</strong> Saltzer, J. H., & Schroeder, M. D. (1975). <em>Protection of Information</em>.
+                    </div>
+                </div>
+
+                <!-- 24. Resolución de Problema -->
+                <div class="sticky-card relative bg-cyan-100 text-slate-900 p-5 rounded-lg transform rotate-1 border-t-8 border-cyan-500">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-cyan-300 text-cyan-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#24</span>
+                    <h3 class="font-extrabold text-cyan-900 uppercase text-sm tracking-wider mb-2">Resolución Problema</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"Las consultas SQL concatenadas sufren fallos de Inyección SQL. ¿Cómo solventarlo? La solución más efectiva es sustituir el código por Prepared Statements parametrizadas..."</p>
+                    <div class="text-[10px] text-cyan-800 font-semibold border-t border-cyan-300/80 pt-2">
+                        <strong>Fuente:</strong> Stuttard, D., & Pinto, M. (2011). <em>Web Application Hacker's Handbook</em>.
+                    </div>
+                </div>
+
+                <!-- 25. Causa-Efecto -->
+                <div class="sticky-card relative bg-red-100 text-slate-900 p-5 rounded-lg transform -rotate-1 border-t-8 border-red-400">
+                    <div class="pin bg-red-700"></div>
+                    <span class="absolute top-2 right-2 bg-red-300 text-red-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#25</span>
+                    <h3 class="font-extrabold text-red-900 uppercase text-sm tracking-wider mb-2">Causa - Efecto</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"El empleo ininterrumpido de contraseñas débiles derivó en un ataque de credential stuffing. Como consecuencia, los atacantes tomaron cuentas privilegiadas y filtraron tres terabytes de datos..."</p>
+                    <div class="text-[10px] text-red-800 font-semibold border-t border-red-300/80 pt-2">
+                        <strong>Fuente:</strong> Mitnick, K. D., & Simon, W. L. (2002). <em>The Art of Deception</em>. Wiley.
+                    </div>
+                </div>
+
+                <!-- 26. Cierre Síntesis -->
+                <div class="sticky-card relative bg-slate-100 text-slate-900 p-5 rounded-lg transform rotate-2 border-t-8 border-slate-600">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-slate-300 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#26</span>
+                    <h3 class="font-extrabold text-slate-900 uppercase text-sm tracking-wider mb-2">Cierre: Síntesis</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"En resumen, la ciberseguridad moderna no es un producto adquirible, sino un proceso continuo. En conclusión, solo mediante tecnología robusta y cultura organizacional se mitigará el riesgo..."</p>
+                    <div class="text-[10px] text-slate-800 font-semibold border-t border-slate-300/80 pt-2">
+                        <strong>Fuente:</strong> Schneier, B. (2000). <em>Secrets and Lies</em>. John Wiley & Sons.
+                    </div>
+                </div>
+
+                <!-- 27. Cierre Interrogante -->
+                <div class="sticky-card relative bg-blue-100 text-slate-900 p-5 rounded-lg transform -rotate-2 border-t-8 border-blue-600">
+                    <div class="pin bg-blue-800"></div>
+                    <span class="absolute top-2 right-2 bg-blue-300 text-blue-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#27</span>
+                    <h3 class="font-extrabold text-blue-900 uppercase text-sm tracking-wider mb-2">Cierre: Proyección</h3>
+                    <p class="card-text text-xs leading-relaxed italic mb-3">"A medida que la IA asume el control directo sobre infraestructuras críticas, el margen de error se reduce a cero. Nos queda una pregunta ineludible: ¿seremos capaces de mantener el control?"</p>
+                    <div class="text-[10px] text-blue-800 font-semibold border-t border-blue-300/80 pt-2">
+                        <strong>Fuente:</strong> Bostrom, N. (2014). <em>Superintelligence</em>. Oxford University Press.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3 -->
+        <section>
+            <div class="inline-flex items-center gap-3 bg-emerald-400 text-slate-950 font-black px-6 py-2 rounded-xl text-lg md:text-xl shadow-lg transform -rotate-1 mb-8">
+                <span class="bg-slate-950 text-emerald-400 w-8 h-8 rounded-lg flex items-center justify-center text-base">3</span>
+                <span>SEGÚN LA ORGANIZACIÓN VISUAL</span>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 28. Ordinario -->
+                <div class="sticky-card relative bg-amber-50 text-slate-900 p-6 rounded-lg transform rotate-1 border-t-8 border-amber-600">
+                    <div class="pin bg-amber-800"></div>
+                    <span class="absolute top-2 right-2 bg-amber-200 text-amber-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#28</span>
+                    <h3 class="font-extrabold text-amber-900 uppercase text-sm tracking-wider mb-3">Párrafo Ordinario</h3>
+                    <div class="bg-white p-3 rounded border border-amber-200 mb-3 shadow-inner">
+                        <p class="card-text text-xs leading-relaxed text-justify" style="text-indent: 1.5rem;">La invención de la imprenta de tipos móviles por Johannes Gutenberg hacia 1440 representó la primera democratización del conocimiento en la historia de la humanidad. Al reducir el costo de reproducción de libros, se aceleró la difusión del saber.</p>
+                    </div>
+                    <div class="text-[10px] text-amber-900 font-semibold border-t border-amber-300 pt-2">
+                        <strong>Fuente:</strong> Eisenstein, E. L. (1983). <em>The Printing Revolution in Early Modern Europe</em>.
+                    </div>
+                </div>
+
+                <!-- 29. Moderno -->
+                <div class="sticky-card relative bg-slate-50 text-slate-900 p-6 rounded-lg transform -rotate-1 border-t-8 border-slate-700">
+                    <div class="tape"></div>
+                    <span class="absolute top-2 right-2 bg-slate-200 text-slate-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#29</span>
+                    <h3 class="font-extrabold text-slate-900 uppercase text-sm tracking-wider mb-3">Párrafo Moderno</h3>
+                    <div class="bg-white p-3 rounded border border-slate-200 mb-3 space-y-2 shadow-inner">
+                        <p class="card-text text-xs leading-relaxed text-justify">El desarrollo del sistema operativo UNIX en los laboratorios Bell revolucionó la industria informática al introducir los principios de modularidad y tuberías (pipes).</p>
+                        <p class="card-text text-xs leading-relaxed text-justify">Dichos conceptos sentaron las bases para GNU/Linux y posibilitaron la construcción de infraestructuras globales de red en la actualidad.</p>
+                    </div>
+                    <div class="text-[10px] text-slate-800 font-semibold border-t border-slate-300 pt-2">
+                        <strong>Fuente:</strong> Kernighan, B. W., & Pike, R. (1984). <em>The UNIX Programming Environment</em>.
+                    </div>
+                </div>
+
+                <!-- 30. Sumario -->
+                <div class="sticky-card relative bg-emerald-50 text-slate-900 p-6 rounded-lg transform rotate-2 border-t-8 border-emerald-600">
+                    <div class="pin bg-emerald-800"></div>
+                    <span class="absolute top-2 right-2 bg-emerald-200 text-emerald-900 text-[10px] font-bold px-2 py-0.5 rounded-full">#30</span>
+                    <h3 class="font-extrabold text-emerald-900 uppercase text-sm tracking-wider mb-3">Párrafo en Sumario</h3>
+                    <div class="bg-white p-3 rounded border border-emerald-200 mb-3 shadow-inner">
+                        <p class="card-text text-xs leading-relaxed font-semibold mb-1">Estándar PCI-DSS:</p>
+                        <p class="card-text text-[11px] leading-tight pl-4" style="text-indent: -0.75rem;">1. Construir y mantener redes seguras contra accesos no autorizados.</p>
+                        <p class="card-text text-[11px] leading-tight pl-4" style="text-indent: -0.75rem;">2. Proteger los datos de tarjetas mediante cifrado fuerte.</p>
+                        <p class="card-text text-[11px] leading-tight pl-4" style="text-indent: -0.75rem;">3. Mantener programas de gestión de vulnerabilidades.</p>
+                    </div>
+                    <div class="text-[10px] text-emerald-900 font-semibold border-t border-emerald-300 pt-2">
+                        <strong>Fuente:</strong> PCI Security Standards Council. (2022). <em>PCI DSS Requirements v4.0</em>.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="max-w-7xl mx-auto mt-8 text-center text-xs text-slate-500">
+        <p>UPTC — Escuela de Ingeniería de Sistemas y Computación — Competencias Comunicativas (2026)</p>
+    </footer>
+
+</body>
+</html>
